@@ -2,7 +2,7 @@
     "100092006324917": {
         "userID": "100092006324917",
         "money": 1e+96,
-        "exp": 1521,
+        "exp": 1527,
         "createTime": {
             "timestamp": 1748273172692
         },
@@ -102,7 +102,7 @@
             "lastUpdate": 1748273172692,
             "workTime": 1749800037975
         },
-        "lastUpdate": 1750776547512,
+        "lastUpdate": 1751197449678,
         "name": "MD Tohidul Islam",
         "lastDaily": 1749800679916
     },
@@ -2404,14 +2404,14 @@
     "100076969407340": {
         "userID": "100076969407340",
         "money": 0,
-        "exp": 7,
+        "exp": 8,
         "createTime": {
             "timestamp": 1750227880088
         },
         "data": {
             "timestamp": 1750227880088
         },
-        "lastUpdate": 1750772912090,
+        "lastUpdate": 1750777286403,
         "name": "Aryan Ahmed"
     },
     "100095336178827": {
@@ -2430,14 +2430,14 @@
     "61573003302026": {
         "userID": "61573003302026",
         "money": 0,
-        "exp": 9,
+        "exp": 10,
         "createTime": {
             "timestamp": 1750227881888
         },
         "data": {
             "timestamp": 1750227881888
         },
-        "lastUpdate": 1750775825307,
+        "lastUpdate": 1750777278036,
         "name": "You R Candy"
     },
     "61571550050635": {
@@ -3315,14 +3315,14 @@
     "61577222290831": {
         "userID": "61577222290831",
         "money": 0,
-        "exp": 15,
+        "exp": 19,
         "createTime": {
             "timestamp": 1750770003106
         },
         "data": {
             "timestamp": 1750770003106
         },
-        "lastUpdate": 1750775386157,
+        "lastUpdate": 1751197340605,
         "name": "SiKa Ji"
     },
     "61550633617568": {
@@ -3989,5 +3989,282 @@
         },
         "lastUpdate": 1750776471963,
         "name": "Facebook user"
+    },
+    "100090393132964": {
+        "userID": "100090393132964",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1750777091936
+        },
+        "data": {
+            "timestamp": 1750777091936
+        },
+        "lastUpdate": 1750777091936,
+        "name": "Musaddik Hossen"
+    },
+    "61569497792525": {
+        "userID": "61569497792525",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1750777110648
+        },
+        "data": {
+            "timestamp": 1750777110648
+        },
+        "lastUpdate": 1750777110648,
+        "name": "Prime Abir"
+    },
+    "61571701267875": {
+        "userID": "61571701267875",
+        "money": 0,
+        "exp": 1,
+        "createTime": {
+            "timestamp": 1750777250160
+        },
+        "data": {
+            "timestamp": 1750777250160
+        },
+        "lastUpdate": 1750777250482,
+        "name": "নান্টু ঘটক"
+    },
+    "61577648069975": {
+        "userID": "61577648069975",
+        "money": 0,
+        "exp": 10,
+        "createTime": {
+            "timestamp": 1751196653059
+        },
+        "data": {
+            "timestamp": 1751196653059
+        },
+        "lastUpdate": 1751197426044,
+        "name": "Haar Li-Na"
+    },
+    "100015168369582": {
+        "userID": "100015168369582",
+        "money": 0,
+        "exp": 2,
+        "createTime": {
+            "timestamp": 1751196926688
+        },
+        "data": {
+            "timestamp": 1751196926688
+        },
+        "lastUpdate": 1751197420927,
+        "name": "Ullash Adnan 󰢏"
+    },
+    "61575747162518": {
+        "userID": "61575747162518",
+        "money": 0,
+        "exp": 2,
+        "createTime": {
+            "timestamp": 1751197009822
+        },
+        "data": {
+            "timestamp": 1751197009822
+        },
+        "lastUpdate": 1751197341467,
+        "name": "কারেন্ট সুন্দর"
+    },
+    "61575850633964": {
+        "userID": "61575850633964",
+        "money": 0,
+        "exp": 2,
+        "createTime": {
+            "timestamp": 1751197010814
+        },
+        "data": {
+            "timestamp": 1751197010814
+        },
+        "lastUpdate": 1751197341785,
+        "name": "Rai Sa"
+    },
+    "61576808343591": {
+        "userID": "61576808343591",
+        "money": 0,
+        "exp": 2,
+        "createTime": {
+            "timestamp": 1751197011054
+        },
+        "data": {
+            "timestamp": 1751197011054
+        },
+        "lastUpdate": 1751197341517,
+        "name": "Hina Ta"
+    },
+    "61556676328937": {
+        "userID": "61556676328937",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045106
+        },
+        "data": {
+            "timestamp": 1751197045106
+        },
+        "lastUpdate": 1751197045106,
+        "name": "Israt Shanta"
+    },
+    "61577273865081": {
+        "userID": "61577273865081",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045110
+        },
+        "data": {
+            "timestamp": 1751197045110
+        },
+        "lastUpdate": 1751197045110
+    },
+    "61577336142233": {
+        "userID": "61577336142233",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045121
+        },
+        "data": {
+            "timestamp": 1751197045121
+        },
+        "lastUpdate": 1751197045121
+    },
+    "61577761684563": {
+        "userID": "61577761684563",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045128
+        },
+        "data": {
+            "timestamp": 1751197045128
+        },
+        "lastUpdate": 1751197045128
+    },
+    "61577816459994": {
+        "userID": "61577816459994",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045131
+        },
+        "data": {
+            "timestamp": 1751197045131
+        },
+        "lastUpdate": 1751197045131
+    },
+    "61577964470668": {
+        "userID": "61577964470668",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045133
+        },
+        "data": {
+            "timestamp": 1751197045133
+        },
+        "lastUpdate": 1751197045133
+    },
+    "100026591199903": {
+        "userID": "100026591199903",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045137
+        },
+        "data": {
+            "timestamp": 1751197045137
+        },
+        "lastUpdate": 1751197045137
+    },
+    "100067321634385": {
+        "userID": "100067321634385",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045147
+        },
+        "data": {
+            "timestamp": 1751197045147
+        },
+        "lastUpdate": 1751197045147,
+        "name": "Amran Hossin"
+    },
+    "100069147552597": {
+        "userID": "100069147552597",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045156
+        },
+        "data": {
+            "timestamp": 1751197045156
+        },
+        "lastUpdate": 1751197045156
+    },
+    "100073560311362": {
+        "userID": "100073560311362",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045165
+        },
+        "data": {
+            "timestamp": 1751197045165
+        },
+        "lastUpdate": 1751197045165
+    },
+    "100086885621051": {
+        "userID": "100086885621051",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197045169
+        },
+        "data": {
+            "timestamp": 1751197045169
+        },
+        "lastUpdate": 1751197045169
+    },
+    "61573008832911": {
+        "userID": "61573008832911",
+        "money": 0,
+        "exp": 1,
+        "createTime": {
+            "timestamp": 1751197267759
+        },
+        "data": {
+            "timestamp": 1751197267759
+        },
+        "lastUpdate": 1751197380142,
+        "name": "Mohammad Ashik"
+    },
+    "61577927301128": {
+        "userID": "61577927301128",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751197287848
+        },
+        "data": {
+            "timestamp": 1751197287848
+        },
+        "lastUpdate": 1751197287848,
+        "name": "ནཾཾཾཾནཾཾཾཾ ནཾཾཾཾནཾཾཾཾ"
+    },
+    "100093857387589": {
+        "userID": "100093857387589",
+        "money": 0,
+        "exp": 1,
+        "createTime": {
+            "timestamp": 1751197288224
+        },
+        "data": {
+            "timestamp": 1751197288224
+        },
+        "lastUpdate": 1751197291430,
+        "name": "Mahim Mahim"
     }
 }
