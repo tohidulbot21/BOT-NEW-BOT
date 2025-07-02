@@ -1,4 +1,3 @@
-
 module.exports.config = {
   name: "pair",
   version: "1.0.1",
@@ -14,58 +13,58 @@ module.exports.config = {
     }
 }
 
-module.exports.onLoad = async() => {
-    const { resolve } = global.nodemodule["path"];
-    const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
-    const { downloadFile } = global.utils;
-    const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'pair_bg.jpg');
-    if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.ibb.co/RBRLmRt/Pics-Art-05-14-10-47-00.jpg", path);
+module.exports.onLoad = async () => {
+  const { resolve } = global.nodemodule["path"];
+  const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
+  const { downloadFile } = global.utils;
+  const dirMaterial = __dirname + `/cache/canvas/`;
+  const imgPath = resolve(__dirname, 'cache/canvas', 'pair_bg.jpg');
+  if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
+  if (!existsSync(imgPath)) await downloadFile("https://i.ibb.co/RBRLmRt/Pics-Art-05-14-10-47-00.jpg", imgPath);
+};
+
+async function circle(image) {
+  const Jimp = require("jimp");
+  image = await Jimp.read(image);
+  image.circle();
+  return await image.getBufferAsync(Jimp.MIME_PNG);
 }
 
 async function makeImage({ one, two }) {
-    const fs = global.nodemodule["fs-extra"];
-    const path = global.nodemodule["path"];
-    const axios = global.nodemodule["axios"]; 
-    const Jimp = require("jimp");
-    const __root = path.resolve(__dirname, "cache", "canvas");
+  const fs = global.nodemodule["fs-extra"];
+  const path = global.nodemodule["path"];
+  const axios = global.nodemodule["axios"]; 
+  const Jimp = require("jimp");
+  const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let pair_img = await Jimp.read(__root + "/pair_bg.jpg");
-    let pathImg = __root + `/pair_${one}_${two}.png`;
-    let avatarOne = __root + `/avt_${one}.png`;
-    let avatarTwo = __root + `/avt_${two}.png`;
+  let pair_img = await Jimp.read(__root + "/pair_bg.jpg");
+  let pathImg = __root + `/pair_${one}_${two}.png`;
+  let avatarOne = __root + `/avt_${one}.png`;
+  let avatarTwo = __root + `/avt_${two}.png`;
 
-    let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
-    fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne));
+  let getAvatarOne = (await axios.get(`https://graph.facebook.com/${one}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
+  fs.writeFileSync(avatarOne, Buffer.from(getAvatarOne));
 
-    let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
-    fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo));
+  let getAvatarTwo = (await axios.get(`https://graph.facebook.com/${two}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`, { responseType: 'arraybuffer' })).data;
+  fs.writeFileSync(avatarTwo, Buffer.from(getAvatarTwo));
 
-    let circleOne = await Jimp.read(await circle(avatarOne));
-    let circleTwo = await Jimp.read(await circle(avatarTwo));
-    pair_img.composite(circleOne.resize(330, 330), 111, 175).composite(circleTwo.resize(330, 330), 1018, 173);
+  let circleOne = await Jimp.read(await circle(avatarOne));
+  let circleTwo = await Jimp.read(await circle(avatarTwo));
+  pair_img.composite(circleOne.resize(330, 330), 111, 175).composite(circleTwo.resize(330, 330), 1018, 173);
 
-    let raw = await pair_img.getBufferAsync(Jimp.MIME_PNG);
+  let raw = await pair_img.getBufferAsync(Jimp.MIME_PNG);
 
-    fs.writeFileSync(pathImg, raw);
-    
-    // Check if files exist before deleting them
-    if (fs.existsSync(avatarOne)) {
-        fs.unlinkSync(avatarOne);
-    }
-    if (fs.existsSync(avatarTwo)) {
-        fs.unlinkSync(avatarTwo);
-    }
+  fs.writeFileSync(pathImg, raw);
 
-    return pathImg;
-}
+  // Check if files exist before deleting them
+  if (fs.existsSync(avatarOne)) {
+    fs.unlinkSync(avatarOne);
+  }
+  if (fs.existsSync(avatarTwo)) {
+    fs.unlinkSync(avatarTwo);
+  }
 
-async function circle(image) {
-    const Jimp = require("jimp");
-    image = await Jimp.read(image);
-    image.circle();
-    return await image.getBufferAsync(Jimp.MIME_PNG);
+  return pathImg;
 }
 
 // Helper function to get user name
@@ -82,7 +81,7 @@ module.exports.run = async function({ api, event, args, Users, Threads, Currenci
     const axios = require("axios");
     const fs = require("fs-extra");
     const { threadID, messageID, senderID } = event;
-    
+
     try {
         var id1 = event.senderID;
         // Get user name with proper error handling
