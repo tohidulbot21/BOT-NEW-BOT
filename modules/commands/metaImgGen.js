@@ -33,7 +33,7 @@ run: async function ({ args, event, api }) {
     }, event.threadID ,event.messageID);
   } catch (e) {
     console.error(e);
-    await api.sendMessage(`Failed to genarate photo!!!!\rror: ${e.message}`, event.threadID);
+    await api.sendMessage(`❌ Failed to generate photo!\nError: ${e.message}`, event.threadID, event.messageID);{e.message}`, event.threadID);
    }
  }
 };

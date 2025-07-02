@@ -52,8 +52,15 @@ start: async function({ nayan, events, args, lang}) {
         attachment: imgData,
         body: "🔍Imagine Result🔍\n\n📝Prompt: " + prompt + "\n\n#️⃣Number of Images: " + numberSearch
     }, events.threadID, events.messageID)
-    for (let ii = 1; ii < parseInt(numberSearch); ii++) {
-        fs.unlinkSync(__dirname + `/cache/${ii}.jpg`)
+    
+    // Clean up cache files
+    for (let ii = 1; ii <= parseInt(numberSearch); ii++) {
+        try {
+            fs.unlinkSync(__dirname + `/cache/${ii}.jpg`);
+        } catch (error) {
+            console.log(`Could not delete cache file ${ii}.jpg`);
+        }
+    }`)
     }
 }
  }
