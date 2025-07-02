@@ -4802,14 +4802,14 @@
     "61555747733602": {
         "userID": "61555747733602",
         "money": 0,
-        "exp": 0,
+        "exp": 2,
         "createTime": {
             "timestamp": 1751443487493
         },
         "data": {
             "timestamp": 1751443487493
         },
-        "lastUpdate": 1751443487493,
+        "lastUpdate": 1751444615353,
         "name": "It'z Ariyan"
     },
     "61556017606543": {
