@@ -7,68 +7,60 @@
 module.exports.config = {
   name: "love", 
   version: "1.0.0", 
-  permission: 0,
+  hasPermssion: 0,
   credits: "TOHI-BOT-HUB",
-  description: "",
+  description: "Create love message between two users",
   usePrefix: true,
   commandCategory: "Love", 
   usages: "love @", 
   cooldowns: 5,
   dependencies: {
     "axios": "",
-    "fs-extra": "",
-    "path": "",
-    "canvas": ""
+    "fs-extra": ""
   }
 };
 
 const fs = require("fs-extra");
-const path = require("path");
 const axios = require("axios");
-// Canvas removed to fix libuuid error
 
-module.exports.onLoad = async () => {
-  const cachePath = __dirname + "/cache/";
-  const imgPath = path.resolve(__dirname, "cache", "ewhd.png");
-  if (!fs.existsSync(cachePath)) fs.mkdirSync(cachePath, { recursive: true });
-  if (!fs.existsSync(imgPath)) {
-    const bg = "https://i.postimg.cc/05tPS3cq/1eb9276ff9b9a420f6fd7de70a3f94b2.jpg";
-    const res = await axios.get(bg, { responseType: "arraybuffer" });
-    fs.writeFileSync(imgPath, Buffer.from(res.data, "utf-8"));
-  }
-};
-
-function drawCircularImage(ctx, image, x, y, size) {
-  ctx.save();
-  ctx.beginPath();
-  ctx.arc(x + size/2, y + size/2, size/2, 0, Math.PI * 2);
-  ctx.clip();
-  ctx.drawImage(image, x, y, size, size);
-  ctx.restore();
-}
-
-async function makeImage({ one, two }) {
-  // Canvas functionality disabled due to system requirements
-  return null;
-}
-
-module.exports.run = async function({ event, api, args }) {
-  const fs = require("fs-extra");
+module.exports.run = async function({ event, api, args, Users }) {
   const { threadID, messageID, senderID, mentions } = event;
-  var mentionId = Object.keys(mentions)[0];
-  let mentionTag = mentionId ? mentions[mentionId].replace('@', '') : null;
+  const mentionId = Object.keys(mentions)[0];
+
   if (!mentionId) {
-    return api.sendMessage("Please tag 1 person", threadID, messageID);
-  } else {
-    var id1 = senderID, id2 = mentionId;
-    // Send text-only message due to system limitations
-    api.sendMessage(
-      {
-        body: `👉 @${mentionTag} love you so much🥰\n\n📝 Note: Image generation temporarily unavailable`,
-        mentions: [{ tag: mentionTag, id: mentionId }]
-      },
-      threadID,
-      messageID
-    );
+    return api.sendMessage("❤️ Please tag someone to create a love message!", threadID, messageID);
+  }
+
+  try {
+    // Get user info
+    const senderInfo = await Users.getData(senderID);
+    const mentionInfo = await Users.getData(mentionId);
+    
+    const senderName = senderInfo.name || "User";
+    const mentionName = mentionInfo.name || mentions[mentionId]?.replace('@', '');
+
+    // Get avatars
+    const senderAvatar = `https://graph.facebook.com/${senderID}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+    const mentionAvatar = `https://graph.facebook.com/${mentionId}/picture?width=512&height=512&access_token=6628568379%7Cc1e620fa708a1d5696fb991c1bde5662`;
+
+    // Create love message
+    const loveMessage = `💕 ${senderName} loves ${mentionName} so much! 💕\n\n❤️ True love never ends! ❤️\n\n💌 Love is in the air! 💌`;
+
+    // Download avatars and send
+    const senderImg = await axios.get(senderAvatar, { responseType: 'stream' });
+    const mentionImg = await axios.get(mentionAvatar, { responseType: 'stream' });
+
+    api.sendMessage({
+      body: loveMessage,
+      mentions: [
+        { tag: senderName, id: senderID },
+        { tag: mentionName, id: mentionId }
+      ],
+      attachment: [senderImg.data, mentionImg.data]
+    }, threadID, messageID);
+
+  } catch (error) {
+    console.error("Love command error:", error);
+    api.sendMessage("❌ Sorry, couldn't create the love message. Please try again!", threadID, messageID);
   }
 };
