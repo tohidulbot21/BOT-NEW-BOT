@@ -115,12 +115,3 @@ externalPort = 3003
 
 [workflows]
 runButton = "Start Bot"
-
-[[workflows.workflow]]
-name = "Start Bot"
-author = 41511890
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "node main.js"

@@ -21,13 +21,15 @@
   "commandDisabled": [],
   "eventDisabled": [],
   "BOTNAME": "TOHI-BOT",
-  "PREFIX": "/",
+  "PREFIX": ">",
   "ADMINBOT": [
     "100092006324917"
   ],
   "AUTO_APPROVE": {
     "enabled": true,
-    "approvedGroups": [],
+    "approvedGroups": [
+      "29408682758779457"
+    ],
     "autoApproveMessage": false
   },
   "APPROVAL": {
@@ -39,7 +41,8 @@
       "9147862888601670",
       "6601227983317461",
       "9826242237455305",
-      "9544932352280702"
+      "9544932352280702",
+      "29408682758779457"
     ],
     "pendingGroups": [],
     "rejectedGroups": []
