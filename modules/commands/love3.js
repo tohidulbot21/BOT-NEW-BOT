@@ -33,10 +33,10 @@ module.exports.onLoad = async () => {
 };
 
 async function makeImage({ one, two }) {
-  const fs = global.nodemodule["fs-extra"];
-  const path = global.nodemodule["path"];
-  const axios = global.nodemodule["axios"];
-  const Jimp = global.nodemodule["jimp"];
+  const fs = require("fs-extra");
+  const path = require("path");
+  const axios = require("axios");
+  const Jimp = require("jimp");
   const cachePath = path.resolve(__dirname, "cache");
 
   let backgroundImg = await Jimp.read(cachePath + "/lpwft.png");
@@ -71,7 +71,7 @@ async function circle(image) {
 }
 
 module.exports.run = async function({ event, api, args }) {
-  const fs = global.nodemodule["fs-extra"];
+  const fs = require("fs-extra");
   const { threadID, messageID, senderID } = event;
   
   var mentionId = Object.keys(event.mentions)[0];
@@ -79,15 +79,24 @@ module.exports.run = async function({ event, api, args }) {
   
   if (!mentionId) return api.sendMessage("Please tag 1 person", threadID, messageID);
   else {
-    var userOne = senderID;
-    var userTwo = mentionId;
-    
-    return makeImage({ one: userOne, two: userTwo }).then(imagePath => 
+    try {
+      var userOne = senderID;
+      var userTwo = mentionId;
+      
+      const imagePath = await makeImage({ one: userOne, two: userTwo });
+      
       api.sendMessage({
         body: "👉" + mentionName + " love you so much🥰",
         mentions: [{ tag: mentionName, id: mentionId }],
         attachment: fs.createReadStream(imagePath)
-      }, threadID, () => fs.unlinkSync(imagePath), messageID)
-    );
+      }, threadID, () => {
+        if (fs.existsSync(imagePath)) {
+          fs.unlinkSync(imagePath);
+        }
+      }, messageID);
+    } catch (error) {
+      console.error("Love3 command error:", error);
+      api.sendMessage("❌ Sorry, couldn't create the love image. Please try again!", threadID, messageID);
+    }
   }
 };

@@ -9,6 +9,7 @@ module.exports.config = {
   hasPermssion: 0,
   credits: "TOHI-BOT-HUB",
   description: "Create love image between two users",
+  usePrefix: true,
   commandCategory: "image",
   usages: "[tag someone]",
   cooldowns: 5,
