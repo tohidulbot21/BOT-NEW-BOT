@@ -2,7 +2,7 @@
     "100092006324917": {
         "userID": "100092006324917",
         "money": 1e+96,
-        "exp": 1533,
+        "exp": 1756,
         "createTime": {
             "timestamp": 1748273172692
         },
@@ -102,7 +102,7 @@
             "lastUpdate": 1748273172692,
             "workTime": 1749800037975
         },
-        "lastUpdate": 1751443903835,
+        "lastUpdate": 1751446221549,
         "name": "MD Tohidul Islam",
         "lastDaily": 1749800679916
     },
@@ -4425,7 +4425,8 @@
         "data": {
             "timestamp": 1751443486967
         },
-        "lastUpdate": 1751443486967
+        "lastUpdate": 1751443486967,
+        "name": "Ore Orewa Vatboy"
     },
     "100032822414317": {
         "userID": "100032822414317",
@@ -4802,14 +4803,14 @@
     "61555747733602": {
         "userID": "61555747733602",
         "money": 0,
-        "exp": 2,
+        "exp": 1,
         "createTime": {
             "timestamp": 1751443487493
         },
         "data": {
             "timestamp": 1751443487493
         },
-        "lastUpdate": 1751444615353,
+        "lastUpdate": 1751444526971,
         "name": "It'z Ariyan"
     },
     "61556017606543": {
@@ -4946,15 +4947,16 @@
     },
     "61564351866897": {
         "userID": "61564351866897",
-        "money": 0,
-        "exp": 0,
+        "money": 241,
+        "exp": 121,
         "createTime": {
             "timestamp": 1751443487585
         },
         "data": {
             "timestamp": 1751443487585
         },
-        "lastUpdate": 1751443487585
+        "lastUpdate": 1751443487585,
+        "name": "Adiba Jahan Ayesha"
     },
     "61568610430637": {
         "userID": "61568610430637",
@@ -5051,7 +5053,8 @@
         "data": {
             "timestamp": 1751443487707
         },
-        "lastUpdate": 1751443487707
+        "lastUpdate": 1751443487707,
+        "name": "Sayham Mahmud Joy"
     },
     "61576072870854": {
         "userID": "61576072870854",
@@ -5243,7 +5246,8 @@
         "data": {
             "timestamp": 1751443487930
         },
-        "lastUpdate": 1751443487930
+        "lastUpdate": 1751443487930,
+        "name": "Eakrat Hasan"
     },
     "61567768097064": {
         "userID": "61567768097064",
@@ -5345,14 +5349,14 @@
     "61553532606079": {
         "userID": "61553532606079",
         "money": 0,
-        "exp": 0,
+        "exp": 1,
         "createTime": {
             "timestamp": 1751443488136
         },
         "data": {
             "timestamp": 1751443488136
         },
-        "lastUpdate": 1751443488136
+        "lastUpdate": 1751446220604
     },
     "61576235163381": {
         "userID": "61576235163381",
@@ -5628,7 +5632,8 @@
         "data": {
             "timestamp": 1751443489096
         },
-        "lastUpdate": 1751443489096
+        "lastUpdate": 1751443489096,
+        "name": "Mina Reyn"
     },
     "100071880077468": {
         "userID": "100071880077468",
@@ -5824,5 +5829,18 @@
         },
         "lastUpdate": 1751443718600,
         "name": "সজীব খাঁন"
+    },
+    "100041684032472": {
+        "userID": "100041684032472",
+        "money": 0,
+        "exp": 0,
+        "createTime": {
+            "timestamp": 1751445408464
+        },
+        "data": {
+            "timestamp": 1751445408464
+        },
+        "lastUpdate": 1751445408464,
+        "name": "Md Limon Mia"
     }
 }
