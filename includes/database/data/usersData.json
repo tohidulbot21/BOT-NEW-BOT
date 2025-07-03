@@ -2,7 +2,7 @@
     "100092006324917": {
         "userID": "100092006324917",
         "money": 1e+96,
-        "exp": 1796,
+        "exp": 1811,
         "createTime": {
             "timestamp": 1748273172692
         },
@@ -102,7 +102,7 @@
             "lastUpdate": 1748273172692,
             "workTime": 1749800037975
         },
-        "lastUpdate": 1751549703732,
+        "lastUpdate": 1751552158311,
         "name": "MD Tohidul Islam",
         "lastDaily": 1749800679916
     },
@@ -2365,14 +2365,14 @@
     "61567287934615": {
         "userID": "61567287934615",
         "money": 0,
-        "exp": 27,
+        "exp": 30,
         "createTime": {
             "timestamp": 1750062272658
         },
         "data": {
             "timestamp": 1750062272658
         },
-        "lastUpdate": 1751549643391,
+        "lastUpdate": 1751552173252,
         "name": "অভিমানী রাজকন্যা"
     },
     "100000478146113": {
@@ -3315,14 +3315,14 @@
     "61577222290831": {
         "userID": "61577222290831",
         "money": 0,
-        "exp": 37,
+        "exp": 40,
         "createTime": {
             "timestamp": 1750770003106
         },
         "data": {
             "timestamp": 1750770003106
         },
-        "lastUpdate": 1751549643376,
+        "lastUpdate": 1751552134981,
         "name": "SiKa Ji"
     },
     "61550633617568": {
@@ -4032,14 +4032,14 @@
     "61577648069975": {
         "userID": "61577648069975",
         "money": 0,
-        "exp": 31,
+        "exp": 33,
         "createTime": {
             "timestamp": 1751196653059
         },
         "data": {
             "timestamp": 1751196653059
         },
-        "lastUpdate": 1751547960055,
+        "lastUpdate": 1751551212180,
         "name": "Haar Li-Na"
     },
     "100015168369582": {
@@ -4071,14 +4071,14 @@
     "61575850633964": {
         "userID": "61575850633964",
         "money": 0,
-        "exp": 2,
+        "exp": 3,
         "createTime": {
             "timestamp": 1751197010814
         },
         "data": {
             "timestamp": 1751197010814
         },
-        "lastUpdate": 1751197341785,
+        "lastUpdate": 1751551204484,
         "name": "Rai Sa"
     },
     "61576808343591": {
@@ -4257,14 +4257,14 @@
     "100093857387589": {
         "userID": "100093857387589",
         "money": 0,
-        "exp": 2,
+        "exp": 3,
         "createTime": {
             "timestamp": 1751197288224
         },
         "data": {
             "timestamp": 1751197288224
         },
-        "lastUpdate": 1751199364721,
+        "lastUpdate": 1751551205171,
         "name": "Mahim Mahim"
     },
     "100087547908783": {
@@ -5937,14 +5937,15 @@
     "61577888128552": {
         "userID": "61577888128552",
         "money": 0,
-        "exp": 0,
+        "exp": 2,
         "createTime": {
             "timestamp": 1751533201891
         },
         "data": {
             "timestamp": 1751533201891
         },
-        "lastUpdate": 1751533201891
+        "lastUpdate": 1751552161071,
+        "name": "Assistant Tamim"
     },
     "61574688947700": {
         "userID": "61574688947700",
@@ -6166,27 +6167,28 @@
     "61577695624573": {
         "userID": "61577695624573",
         "money": 0,
-        "exp": 10,
+        "exp": 11,
         "createTime": {
             "timestamp": 1751533205464
         },
         "data": {
             "timestamp": 1751533205464
         },
-        "lastUpdate": 1751547967352,
+        "lastUpdate": 1751551210955,
         "name": "Samira Eva"
     },
     "100049781981117": {
         "userID": "100049781981117",
         "money": 0,
-        "exp": 2,
+        "exp": 6,
         "createTime": {
             "timestamp": 1751534229640
         },
         "data": {
             "timestamp": 1751534229640
         },
-        "lastUpdate": 1751536067267
+        "lastUpdate": 1751551252937,
+        "name": "Farabi Islam Robiul"
     },
     "61577565253243": {
         "userID": "61577565253243",
@@ -6199,5 +6201,18 @@
             "timestamp": 1751539725890
         },
         "lastUpdate": 1751539725897
+    },
+    "61553170133287": {
+        "userID": "61553170133287",
+        "money": 0,
+        "exp": 2,
+        "createTime": {
+            "timestamp": 1751550864801
+        },
+        "data": {
+            "timestamp": 1751550864801
+        },
+        "lastUpdate": 1751550867062,
+        "name": "𝐃𝐉 𝐑𝐀𝐇𝐈 \\____❼❹❸ ;* ;) 3:"
     }
 }
