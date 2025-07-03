@@ -1,29 +1,21 @@
 module.exports.config = {
 	name: "ping",
-	version: "1.0.4",
-	permssion: 0,
+	version: "1.0.0",
+	hasPermssion: 0,
 	credits: "TOHI-BOT-HUB",
-	description: "Tag all members",
-  usePrefix: true,
-	commandCategory: "group",
-	usages: "[Text]",
-	cooldowns: 1
+	description: "Bot's network ping (latency) check",
+	commandCategory: "system",
+	usages: "/ping",
+	cooldowns: 2,
+	usePrefix: true,
 };
 
-module.exports.run = async function({ api, event, args }) {
-	try {
-		const botID = api.getCurrentUserID();
-		const listUserID = event.participantIDs.filter(ID => ID != botID && ID != event.senderID);
-		var body = (args.length != 0) ? args.join(" ") : "@everyone", mentions = [], index = 0;
-		
-		for(const idUser of listUserID) {
-			body = "‎" + body;
-			mentions.push({ id: idUser, tag: "‎", fromIndex: index - 1 });
-			index -= 1;
-		}
-
-		return api.sendMessage({ body, mentions }, event.threadID, event.messageID);
-
-	}
-	catch (e) { return console.log(e); }
-}
+module.exports.run = async function({ api, event }) {
+	const start = Date.now();
+	api.sendMessage("🏓 Calculating ping...", event.threadID, (err, info) => {
+		if (err) return;
+		const latency = Date.now() - start;
+		const replyMsg = `🏓 𝗣𝗢𝗡𝗚! 𝗡𝗲𝘁𝘄𝗼𝗿𝗸 𝗣𝗶𝗻𝗴: ${latency} ms\n『🔰』𝑪𝒓𝒆𝒅𝒊𝒕: 𝑻𝑶𝑯𝑰-𝑩𝑶𝑻-𝑯𝑼𝑩`;
+		api.editMessage(replyMsg, info.messageID, event.threadID);
+	}, event.messageID);
+};

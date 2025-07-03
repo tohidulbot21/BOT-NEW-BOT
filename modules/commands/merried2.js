@@ -6,6 +6,7 @@ module.exports.config = {
   name: "married2",
   version: "1.0.0",
   hasPermssion: 0,
+  usePrefix: true,
   credits: "TOHI-BOT-HUB", 
   description: "Create married image between two users",
   commandCategory: "image",
