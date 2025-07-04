@@ -115,6 +115,40 @@ module.exports = function ({ api, Users, Threads, Currencies, logger, botSetting
 
       // Prefix & usePrefix Logic
       const messageBody = event.body.trim();
+
+      // ------------- ADD THIS BLOCK FOR PREFIX-ONLY INPUT -------------
+      if (messageBody === prefix) {
+        // Run prefix.js command if user types only prefix
+        let prefixCommand = commands.get("prefix");
+        // Also check aliases
+        if (!prefixCommand) {
+          for (const [name, cmd] of commands) {
+            if (cmd.config.aliases && Array.isArray(cmd.config.aliases)) {
+              if (cmd.config.aliases.includes("prefix")) {
+                prefixCommand = cmd;
+                break;
+              }
+            }
+          }
+        }
+        if (prefixCommand && typeof prefixCommand.run === "function") {
+          return await prefixCommand.run({
+            api,
+            event,
+            args: [],
+            Users,
+            Threads,
+            Currencies,
+            permssion: prefixCommand.config.permission || 0,
+            getText: (k, ...a) => k, // fallback getText
+            logger
+          });
+        } else {
+          return api.sendMessage(`Prefix command not found!`, threadID, messageID);
+        }
+      }
+      // ---------------------------------------------------------------
+
       let msg = messageBody;
       let isPrefixed = false;
       if (msg.startsWith(prefix)) {
